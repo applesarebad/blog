@@ -1,0 +1,32 @@
+---
+import '../../styles/global.css';
+import Bloglayout from '../../layouts/bloglayout.astro';
+import PostPreview from '../../components/post-preview.astro';
+
+
+export async function getStaticPaths() {
+  const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+
+  const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+---
+
+<Bloglayout>
+  
+  <div>
+    {posts.map((post: any) => <PostPreview url = {post.url} title = {post.frontmatter.title} date = {post.frontmatter.date} tags = {post.frontmatter.tags} description = {post.frontmatter.description}/>)}
+  </div>
+</Bloglayout>
+  

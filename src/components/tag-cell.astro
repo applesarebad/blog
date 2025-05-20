@@ -1,0 +1,44 @@
+---
+const { tag } = Astro.props;
+
+let colour;
+switch (tag.charAt(0).toLowerCase()) {
+  case 'a': case 'b': case 'c': colour = [255, 169, 169]; break;
+  case 'd': case 'e': case 'f': colour = [255, 169, 227]; break;
+  case 'g': case 'h': case 'i': colour = [227, 169, 255]; break;
+  case 'j': case 'k': case 'l': colour = [169, 169, 255]; break;
+  case 'm': case 'n': case 'o': colour = [169, 227, 255]; break;
+  case 'p': case 'q': case 'r': colour = [169, 255, 227]; break;
+  case 's': case 't': case 'u': colour = [169, 255, 169]; break;
+  case 'v': case 'w': case 'x': colour = [227, 255, 169]; break;
+  case 'y': case 'z':
+  default: colour = [255, 227, 169]; break;
+}
+
+const [r, g, b] = colour;
+---
+
+<style define:vars={{ r, g, b }}>
+  .cell {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 1rem;
+    background-color: rgb(var(--r), var(--g), var(--b));
+    text-decoration: none;
+    padding: 0.25rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(80, 0, 0);
+  }
+</style>
+
+<a href={`/blog/${tag}`}>
+  <div class="cell">
+    <span>{tag}</span>
+  </div>
+</a>

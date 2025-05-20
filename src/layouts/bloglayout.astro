@@ -1,26 +1,27 @@
 ---
 import '../styles/global.css';
-import Header from '../components/header.astro';'../components/navbar.astro'
-import Footer from '../components/footer.astro';'../components/footer.astro'
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
 ---
-
-
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
-    <title>aslfjsdflksdjl;fasdj;flasd</title>
+    <title>afjiadsfjl</title>
+    <style>
+        h1{
+            color: darkmagenta
+        }
+    </style>
   </head>
   <body>
     <Header />
     <div class = content>
-    <h1>test</h1>
-    <a href = "/posts/2025-05-16-14Mine">Post1</a>
+        <h1>stuff</h1>
+        <slot/>
     </div>
     <Footer/>
   </body>
-  
-  
 </html>

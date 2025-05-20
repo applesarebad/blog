@@ -1,0 +1,38 @@
+html{
+    background-color: rgb(255, 241, 254);
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100ch;
+    padding: 1rem;
+    color: rgb(80, 0, 0);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    color: rgb(80, 0, 0);
+    padding: 10px 0;
+  }
+  
+  .nav-links a:hover{
+    text-decoration: underline;
+  }
+  
+  

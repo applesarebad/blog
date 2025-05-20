@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import Header from '../components/header.astro';'../components/navbar.astro'
+import Footer from '../components/footer.astro';'../components/footer.astro'
+import TagCell from '../components/tag-cell.astro';
+const {frontmatter} = Astro.props;
+---
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>aslfjsdflksdjl;fasdj;flasd</title>
+    <style>
+        h1{
+            font-size: 2.25rem;
+            margin-bottom: 3%;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        .tags {
+        flex: 0 1 auto; /* <- DO NOT let it shrink */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem 0.25rem;
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <div class = content>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.description}</p>
+        <br>
+        <p>{frontmatter.date} </p>
+        <br>
+      <div class = tags>
+        {frontmatter.tags.map((tag_: any) => <TagCell tag = {tag_} />)}
+      </div>
+        <slot />
+    </div>
+    <Footer/>
+  </body>
+  
+  
+</html>
