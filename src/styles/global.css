@@ -35,4 +35,19 @@ html{
     text-decoration: underline;
   }
   
+
+img {
+    max-width: 100%; 
+    max-height: 20em;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    align-self: center;
+    display: block; 
+}
+.caption {
+  text-align: center;
+  font-style: italic;
+} 
   
