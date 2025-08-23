@@ -1,5 +1,5 @@
 ---
-const {title, url, date, tags, description} = Astro.props;
+const {title, url, description} = Astro.props;
 import TagCell from "./tag-cell.astro";
 
 ---
@@ -23,7 +23,8 @@ import TagCell from "./tag-cell.astro";
         margin: 0;
         margin-right: 5%;
         padding: 0;
-        color: rgb(119, 0, 91);
+        color: rgb(174, 79, 152);
+        font-weight: normal;
         
     }
     p{
@@ -41,6 +42,7 @@ import TagCell from "./tag-cell.astro";
         border-radius: 10px;
         box-shadow: 3px 3px 3px rgb(255, 180, 236);
         transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        height: 200px;
 }
     .post:hover {
         background-color: #ffe7fb;
@@ -56,8 +58,6 @@ import TagCell from "./tag-cell.astro";
 
     }
     .tags {
-        flex: 0 1 auto; 
-        display: flex;
         flex-wrap: wrap;
         justify-content: left;
         margin-left: 5%;
@@ -73,13 +73,11 @@ import TagCell from "./tag-cell.astro";
         <br>
         <div class = 'rowone'>
             <h2>{title}</h2>
-            <h4>{date}</h4>
         </div>
         
 
         <div class = 'tags'>
-            {tags.map((tag_: any) => <TagCell tag = {tag_} />)}
-
+            <h4>{description}</h4>
         </div>
         
         <br>

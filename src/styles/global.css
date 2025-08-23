@@ -21,6 +21,7 @@ html{
     display: flex;
     justify-content: right;
     gap: 1.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
   }
   
   .nav-links a {
@@ -29,10 +30,13 @@ html{
     text-transform: lowercase;
     color: rgb(80, 0, 0);
     padding: 10px 0;
+    transition: transform 0.2s ease, color 0.2s ease;
   }
   
   .nav-links a:hover{
-    text-decoration: underline;
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform: translateY(-5px);
+    text-shadow: 0 2px 5px rgba(255, 142, 230, 0.5); /* subtle glowing shadow */
   }
   
 

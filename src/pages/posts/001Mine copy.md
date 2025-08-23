@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/postlayout.astro
-title: '14 Minesweeper Variants'
-date: 'May 16, 2025'
-description: 'very good'
-tags: ["games"]
+title: '15 Minesweeper Variants'
+date: 'May 17, 2025'
+description: 'very good!'
+tags: ["gamer"]
 ---
 
 ![14 Minesweeper variants](../../images/001Mine/14-Mine-Sweeper.png)
