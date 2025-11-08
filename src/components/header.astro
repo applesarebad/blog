@@ -2,23 +2,35 @@
 import Navbar from './navbar.astro';
 ---
 <head>
-    <style>
-        header{
-        width: 100%;
-        max-width: 100ch; 
-        margin: 0 auto;
-        }
+  <style>
+    :global(body) { margin: 0; }
+    header {
+      width: 100%;
+      background-color: pink;
 
-        nav {
-            display: flex;
-        }
+      position:fixed;
+    }
 
-    </style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100ch;
+      margin: 0 auto;
+      padding: 1rem; 
+      color: black;
+    
+    }
+    .header-spacer {
+        height: 5rem;
+    }
+  </style>
 </head>
 
 <header>
-    <nav>
-        <p>andrew&nbsp;z</p>
-        <Navbar />
-    </nav>
+  <nav>
+    <p>andrew&nbsp;z</p>
+    <Navbar />
+  </nav>
 </header>
+<div class = header-spacer></div>

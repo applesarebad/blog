@@ -8,6 +8,7 @@ html{
     max-width: 100ch;
     padding: 1rem;
     color: rgb(80, 0, 0);
+    font-family: sans-serif;
   }
   
   * {
