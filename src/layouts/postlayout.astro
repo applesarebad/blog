@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
-import Header from '../components/header.astro';'../components/navbar.astro'
-import Footer from '../components/footer.astro';'../components/footer.astro'
+import Body from './empty.astro';
 import TagCell from '../components/tag-cell.astro';
 const {frontmatter} = Astro.props;
 ---
@@ -36,19 +35,19 @@ const {frontmatter} = Astro.props;
     </style>
   </head>
   <body>
-    <Header />
+    <Body>
     <div class = content>
         <h1>{frontmatter.title}</h1>
         <p>{frontmatter.description}</p>
         <br>
-        <p>{frontmatter.date} </p>
+        <p>{frontmatter.date} {frontmatter.lastupdate}</p>
         <br>
       <div class = tags>
         {frontmatter.tags.map((tag_: any) => <TagCell tag = {tag_} />)}
       </div>
         <slot />
     </div>
-    <Footer/>
+  </Body>
   </body>
   
   

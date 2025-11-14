@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/postlayout.astro
-title: '14 Minesweeper Variants'
+title: '16 Minesweeper Variants'
 date: 'May 16, 2025'
-description: 'very good'
+summary: 'very good'
 tags: ["games"]
 ---
 

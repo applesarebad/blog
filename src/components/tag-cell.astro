@@ -23,7 +23,6 @@ const [r, g, b] = colour;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     border-radius: 1rem;
     background-color: rgb(var(--r), var(--g), var(--b));
     text-decoration: none;
@@ -37,7 +36,7 @@ const [r, g, b] = colour;
   }
 </style>
 
-<a href={`/blog/${tag}`}>
+<a href={`/${Astro.url.pathname.split("/")[1]}/${tag}`}>
   <div class="cell">
     <span>{tag}</span>
   </div>
